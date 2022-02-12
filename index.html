@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>House of Klas</title>
+        <style>
+            #toplist {
+                display: flex;
+                max-width: 100vw;
+                justify-content: space-between;
+            }
+            #logga {
+                max-height: 70px;
+            }
+            #hamburger {
+                max-height: 70px;
+            }
+            img {
+                max-width: 100%;
+            }
+
+            html {background: gray;}
+            body {width: 384px; background: white;}
+        </style>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/css/splide.min.css" >
+    </head>
+    <body>
+        <div id="toplist">
+            <img id="logga" src="house-of-klas-fake-logo.png" alt="logga house of klas">
+            <img id="hamburger" src="hamburger.png">
+        </div>
+        <div id="bildspel" class="splide">
+            <div class="splide__track">
+                <ul class="splide__list">
+                    <li class="splide__slide">
+                        <img src="hus-1.jpeg">
+                    </li>
+                    <li class="splide__slide">
+                        <img src="drink-bord-1.jpeg">
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <script defer src="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/js/splide.min.js"></script>
+        <script defer>
+            document.addEventListener('DOMContentLoaded', function() {
+                var bildspel = new Splide( '#bildspel', {
+                    type: 'loop',
+                } );
+                bildspel.mount();
+            });
+        </script>
+    </body>
+</html>
